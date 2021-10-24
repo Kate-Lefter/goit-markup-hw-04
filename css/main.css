@@ -9,6 +9,7 @@
   --primary-text-color: #212121;
   --second-text-color: #757575;
   --fon-hero-color: rgba(47, 48, 58, 0.4);
+  --icon-color:#AFB1B8;
 }
 p,
 h1,
@@ -146,16 +147,16 @@ body {
   color: var(--accent-color);
 }
 .link-icon {
-  width: 16px;
-  height: 12px;
   margin-right: 10px;
-  fill: var(--second-text-color);
+  background-position: center;
+  fill: currentColor;
+  
 }
-.icon-phon {
-  width: 10px;
-  height: 16px;
-  margin-right: 10px;
+.link-icon:hover {
+  fill: var(--accent-color);
 }
+
+
 .menu-link {
   display: block;
   padding-top: 32px;
@@ -259,7 +260,7 @@ body {
   background-position: center;
 }
 .icon-antenna::before {
-  background-image: url(../img/page-3/icon/Group.svg);
+  background-image: url(../img/page-3/icon/antenna.svg);
 }
 .icon-clock::before {
   background-image: url(../img/page-3/icon/clock.svg);
@@ -351,7 +352,40 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.18;
+  margin-bottom: 16px;
   color: var(--second-text-color);
+}
+.icon-manu{
+  display: flex;
+  justify-content: center;
+}
+.icon-list {
+ width: 44px;
+ height: 44px;
+ margin-right: 10px;
+}
+.icon-list:last-child{
+  margin-right: 0px;
+}
+.icon-info{
+  fill: var(--icon-color);
+}
+.link-info{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.link-info:hover,
+.link-info:focus {
+  background-color: var(--accent-color);
+}
+
+.link-info:hover, .icon-info,
+.link-info:focus, .icon-info {
+  fill: var(--header-color);
 }
 
 .container-hero {
