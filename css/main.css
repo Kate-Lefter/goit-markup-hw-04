@@ -373,26 +373,27 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--icon-color);
 }
-.icon-info {
-  fill: currentColor;
-}
-
-.icon-info:hover,
-.icon-info:focus {
-  fill: var(--header-color);
-}
-
 .link-info:hover,
 .link-info:focus {
   background-color: var(--accent-color);
 }
-.link-info:hover,
-.icon-info,
-.link-info:focus,
+
 .icon-info {
   fill: var(--icon-color);
+}
+
+.icon-info:hover,
+.icon-info:focus {
+  fill: var(--icon-color);
+}
+
+.link-info:hover .icon-info {
+  fill: var(--header-color);
+}
+
+.link-info:focus .icon-info {
+  fill: var(--header-color);
 }
 
 .container-hero {
@@ -472,29 +473,33 @@ body {
 .frame {
   width: 170px;
   height: 92px;
+}
+.frame-clients {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
 }
-.frame:hover,
-.frame:focus {
-  border: var(--accent-color);
+
+.frame-clients:hover,
+.frame-clients:focus {
+  border: 1px solid var(--accent-color);
+}
+.frame-clients:hover .icon-frame {
+  fill: var(--accent-color);
+}
+.frame-clients:focus .icon-frame {
+  fill: var(--accent-color);
 }
 .frame:not(:last-child) {
   margin-right: 30px;
 }
 .icon-frame {
-  padding-top: 23px;
   fill: var(--icon-color);
-}
-.icon-frame:hover,
-.icon-frame:focus {
-  fill: var(--accent-color);
-}
-.frame:hover,
-.icon-frame .frame:focus,
-.icon-frame {
-  border: var(--accent-color);
 }
 
 /*------------------------------------------footer----------------------------------------------*/
@@ -520,7 +525,11 @@ body {
   line-height: 1.71;
   color: var(--second-logo-color);
 }
-
+.aside-footer:hover,
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--accent-color);
+}
 .footer-link {
   font-weight: 500;
   font-size: 14px;
@@ -536,6 +545,9 @@ body {
 .footer:last-child {
   margin-bottom: 0px;
 }
+.footer-info-icon {
+  margin-left: 70px;
+}
 .footer-icon {
   font-weight: bold;
   font-size: 14px;
@@ -543,4 +555,34 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--header-color);
+  margin-bottom: 20px;
+}
+.footer-s-l-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-s-l-link:hover,
+.footer-s-l-link:focus {
+  background-color: var(--accent-color);
+}
+.icon-info-footer {
+  fill: var(--header-color);
+}
+.footer-s-l-link:hover .footer-last,
+.footer-s-l-link:focus .footer-last {
+  fill: #ffffff;
+}
+.footer-last:hover,
+.footer-last:focus {
+  background-color: var(--accent-color);
+}
+.footer-last {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-last .footer-s-l-link {
+  fill: var(--header-color);
 }
