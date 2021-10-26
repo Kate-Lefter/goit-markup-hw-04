@@ -508,6 +508,10 @@ body {
   align-items: center;
   background-color: var(--second-accent-color);
 }
+.footer-info {
+  display: flex;
+  align-items: baseline;
+}
 
 .aside-footer {
   margin-bottom: 9px;
@@ -535,10 +539,10 @@ body {
 .footer-icon {
   font-weight: bold;
   font-size: 14px;
-  line-height: 1.14px;
+  line-height: 1.14;
   letter-spacing: 0.03em;
-  margin-top: 72px;
-  margin-bottom: 20px;
   text-transform: uppercase;
   color: var(--header-color);
+}
+.footer-blok {
 }
